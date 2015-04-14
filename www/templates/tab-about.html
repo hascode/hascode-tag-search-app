@@ -1,4 +1,4 @@
-<ion-view view-title="About" ng-controller="AboutController">
+<ion-view view-title="About" ng-controller="AboutController as about">
     <ion-content class="padding">
         <div class="card">
             <div class="item item-divider">
@@ -8,7 +8,7 @@
                     <img src="img/icon.png">
                 </div>
             <div class="item item-divider">
-                <a class="centered" href="http://www.hascode.com/">{{year}} Micha Kops /  www.hascode.com</a>
+                <a class="centered" href="http://www.hascode.com/">{{about.year}} Micha Kops /  www.hascode.com</a>
             </div>
         </div>
     </ion-content>
