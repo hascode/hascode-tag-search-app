@@ -11,6 +11,6 @@ angular.module('hascodeTagWizard.controllers', [])
     })
 
     .controller('AboutController', function ($scope) {
-
+        $scope.year = new Date().getFullYear();
     })
 ;
