@@ -11,12 +11,14 @@ angular.module('hascodeTagWizard.services', [])
 
         return {
             searchByTag: function (tag) {
-                $http.get(blogUrl + tag).
+                var searchUrl = blogUrl + tag+'/';
+                console.log('searching articles for tag '+tag);
+                $http.get(searchUrl).
                     success(function (data, status, headers, config) {
-                        console.log('success',data);
+                        console.log('success: '+data);
                     }).
                     error(function (data, status, headers, config) {
-                        console.log('error: ', data)
+                        console.log('error: '+data+', status: '+status+', url: '+searchUrl);
                     });
                 return articles;
             }
