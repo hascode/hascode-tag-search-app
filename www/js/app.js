@@ -35,7 +35,7 @@ angular.module('hascodeTagWizard', ['ionic', 'hascodeTagWizard.controllers', 'ha
             .state('tab.about', {
                 url: '/about',
                 views: {
-                    'tab-search': {
+                    'tab-about': {
                         templateUrl: "templates/tab-about.html",
                         controller: 'AboutController'
                     }
