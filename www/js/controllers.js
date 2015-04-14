@@ -9,9 +9,13 @@ angular.module('hascodeTagWizard.controllers', [])
             this.hits = searchService.searchByTag(this.term) || [];
         };
 
-        this.resetResults = function(){
+        this.resetResults = function () {
             this.showResults = false;
             this.hits = [];
         };
+    })
+
+    .controller('AboutController', function () {
+        this.year = new Date().getFullYear();
     })
 ;

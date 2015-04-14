@@ -14,7 +14,14 @@ angular.module('hascodeTagWizard', ['ionic', 'hascodeTagWizard.controllers', 'ha
         });
     })
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            // Allow same origin resource loads.
+            'self',
+            // Allow loading from our blog domain.
+            'http://www.hascode.com/**'
+        ]);
+
         $stateProvider
             .state('tab', {
                 url: "/tab",

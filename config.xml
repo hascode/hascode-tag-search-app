@@ -5,6 +5,7 @@
   <author href="http://www.hascode.com/">Micha Kops</author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="http://www.hascode.com/**"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
