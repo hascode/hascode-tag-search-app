@@ -1,10 +1,18 @@
-<ion-view view-title="hasCode.com Tag Search">
+<ion-view view-title="hasCode.com Tag Search" ng-controller="SearchController">
     <ion-content class="padding">
         <div class="list list-inset">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search articles by tag">
+                <input type="text" placeholder="Search articles by tag" ng-model="term" ng-change="searchTerm()">
             </label>
+            <h3 ng-show="hasSearched">{{hits.length}} Hits for &quot;{{term}}&quot;</h3>
+            <div class="list" ng-repeat="hit in hits">
+                <a class="item item-thumbnail-left" href="{{hit.url}}">
+                    <img src="{{hit.image}}">
+                    <h2>{{hit.title}}</h2>
+                    <p>{{hit.excerpt}}</p>
+                </a>
+            </div>
         </div>
     </ion-content>
 </ion-view>
