@@ -5,8 +5,6 @@ angular.module('hascodeTagWizard.controllers', [])
         $scope.hasSearched = false;
 
         $scope.searchTerm = function () {
-            alert('term is: ' + $scope.term);
-
             $scope.hasSearched = true;
             $scope.hits = searchService.searchByTag($scope.term) || [];
         };
