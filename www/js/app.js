@@ -14,7 +14,7 @@ angular.module('hascodeTagWizard', ['ionic', 'hascodeTagWizard.controllers', 'ha
         });
     })
 
-    .config(function ($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $sceDelegateProvider, $httpProvider) {
         $sceDelegateProvider.resourceUrlWhitelist([
             // Allow same origin resource loads.
             'self',

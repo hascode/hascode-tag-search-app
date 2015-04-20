@@ -1,17 +1,20 @@
 angular.module('hascodeTagWizard.controllers', [])
-    .controller('SearchController', function (searchService) {
-        this.term = '';
-        this.hits = [];
-        this.showResults = false;
+    .controller('SearchController', function (searchService, $scope) {
+        $scope.term = '';
+        $scope.hits = [];
+        $scope.showResults = false;
 
-        this.searchTerm = function () {
-            this.showResults = true;
-            this.hits = searchService.searchByTag(this.term) || [];
+        $scope.searchTerm = function () {
+            $scope.showResults = true;
+            searchService.searchByTag(this.term).then(function(response){
+                $scope.hits = response.data || [];
+                console.log('hits received: '+$scope.hits.length);
+            });
         };
 
-        this.resetResults = function () {
-            this.showResults = false;
-            this.hits = [];
+        $scope.resetResults = function () {
+            $scope.showResults = false;
+            $scope.hits = [];
         };
     })
 

@@ -17,9 +17,28 @@
   "cordovaPlugins": [
     "org.apache.cordova.device",
     "org.apache.cordova.console",
-    "com.ionic.keyboard"
+    "com.ionic.keyboard",
+    "org.apache.cordova.inappbrowser",
+    {
+      "locator": "https://github.com/apache/cordova-plugin-whitelist.git",
+      "id": "cordova-plugin-whitelist"
+    },
+    {
+      "locator": "https://github.com/wymsee/cordova-HTTP.git",
+      "id": "com.synconset.cordovaHTTP"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-file",
+      "id": "org.apache.cordova.file"
+    },
+    "plugin.http.request"
   ],
   "cordovaPlatforms": [
-    "android"
+    "android",
+    {
+      "platform": "android",
+      "version": "3.7.1",
+      "locator": "android"
+    }
   ]
 }

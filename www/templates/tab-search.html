@@ -3,10 +3,10 @@
         <div class="list list-inset">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search articles by tag" ng-model="search.term" ng-keyup="$event.keyCode == 13 && search.searchTerm()" ng-change="search.resetResults()">
+                <input type="text" placeholder="Search articles by tag" ng-model="term" ng-keyup="$event.keyCode == 13 && searchTerm()" ng-change="resetResults()">
             </label>
-            <h3 ng-show="search.showResults">{{search.hits.length}} Hits for &quot;{{search.term}}&quot;</h3>
-            <div class="list" ng-repeat="hit in search.hits">
+            <h3 ng-show="showResults">{{hits.length}} Hits for &quot;{{term}}&quot;</h3>
+            <div class="list" ng-repeat="hit in hits">
                 <blogarticle data="hit"/>
             </div>
         </div>
