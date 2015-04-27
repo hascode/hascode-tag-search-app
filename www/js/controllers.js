@@ -5,10 +5,10 @@ angular.module('hascodeTagWizard.controllers', [])
         $scope.showResults = false;
 
         $scope.searchTerm = function () {
-            $scope.showResults = true;
             searchService.searchByTag(this.term).then(function(response){
                 $scope.hits = response.data || [];
                 console.log('hits received: '+$scope.hits.length);
+                $scope.showResults = true;
             });
         };
 
@@ -16,6 +16,10 @@ angular.module('hascodeTagWizard.controllers', [])
             $scope.showResults = false;
             $scope.hits = [];
         };
+
+        $scope.browse = function(url){
+            console.log('opening url: '+url);
+        }
     })
 
     .controller('AboutController', function () {
