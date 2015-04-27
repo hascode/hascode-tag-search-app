@@ -24,5 +24,9 @@ angular.module('hascodeTagWizard.controllers', [])
 
     .controller('AboutController', function () {
         this.year = new Date().getFullYear();
+
+        this.browseBlog = function(){
+            window.open('http://www.hascode.com/', '_blank', 'location=yes');
+        }
     })
 ;

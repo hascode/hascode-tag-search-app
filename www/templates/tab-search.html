@@ -7,7 +7,7 @@
             </label>
             <h3 ng-show="showResults">{{hits.length}} Hits for &quot;{{term}}&quot;</h3>
             <div class="list" ng-repeat="hit in hits">
-                <blogarticle data="hit" browse="browse(hit.url)"/>
+                <blogarticle data="hit"/>
             </div>
         </div>
     </ion-content>
