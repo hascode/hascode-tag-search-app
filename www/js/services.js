@@ -1,4 +1,4 @@
-angular.module('hascodeTagWizard.services', [])
+angular.module('hascodeTagWizard')
 
     .factory('searchService', function ($http, $q) {
         var blogUrl = 'http://www.hascode.com/wp-content/byTag.php?tag=';

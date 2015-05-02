@@ -1,4 +1,4 @@
-angular.module('hascodeTagWizard', ['ionic', 'hascodeTagWizard.controllers', 'hascodeTagWizard.services', 'hascodeTagWizard.directives'])
+angular.module('hascodeTagWizard', ['ionic'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {

@@ -1,4 +1,4 @@
-angular.module('hascodeTagWizard.directives', [])
+angular.module('hascodeTagWizard')
 
     .directive('blogarticle', function () {
         return {

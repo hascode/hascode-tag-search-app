@@ -1,4 +1,4 @@
-angular.module('hascodeTagWizard.controllers', [])
+angular.module('hascodeTagWizard')
     .controller('SearchController', function (searchService, $scope) {
         $scope.term = '';
         $scope.hits = [];
