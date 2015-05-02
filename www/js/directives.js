@@ -1,6 +1,9 @@
+/* global angular, console */
 angular.module('hascodeTagWizard')
 
     .directive('blogarticle', function () {
+        "use strict";
+
         return {
             restrict: 'E',
             scope: {
@@ -10,7 +13,7 @@ angular.module('hascodeTagWizard')
                 scope.browse = function (url) {
                     console.log('opening link: '+url);
                     window.open(url, '_blank', 'location=yes');
-                }
+                };
             },
             template: '<a class="item item-thumbnail-left item-text-wrap" ng-click="browse(article.url)">' +
                 '<img ng-src="{{article.image}}">' +

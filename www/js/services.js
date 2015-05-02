@@ -1,6 +1,9 @@
+/* global angular, console */
 angular.module('hascodeTagWizard')
 
-    .factory('searchService', function ($http, $q) {
+    .factory('searchService', function ($http) {
+        "use strict";
+
         var blogUrl = 'http://www.hascode.com/wp-content/byTag.php?tag=';
 
         return {
