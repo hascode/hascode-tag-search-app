@@ -19,10 +19,6 @@ angular.module('hascodeTagWizard')
             $scope.showResults = false;
             $scope.hits = [];
         };
-
-        $scope.browse = function(url){
-            console.log('opening url: '+url);
-        };
     })
 
     .controller('AboutController', function () {
