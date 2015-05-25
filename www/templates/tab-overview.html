@@ -1,0 +1,7 @@
+<ion-view view-title="Tag Overview">
+    <ion-content class="padding">
+        <div ng-init="loadTags()">
+            <tag ng-repeat="tag in tags" data="tag"/>
+        </div>
+    </ion-content>
+</ion-view>

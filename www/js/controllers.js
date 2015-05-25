@@ -8,9 +8,9 @@ angular.module('hascodeTagWizard')
         $scope.showResults = false;
 
         $scope.searchTerm = function () {
-            searchService.searchByTag(this.term).then(function(response){
+            searchService.searchByTag(this.term).then(function (response) {
                 $scope.hits = response.data || [];
-                console.log('hits received: '+$scope.hits.length);
+                console.log('hits received: ' + $scope.hits.length);
                 $scope.showResults = true;
             });
         };
@@ -26,8 +26,21 @@ angular.module('hascodeTagWizard')
 
         this.year = new Date().getFullYear();
 
-        this.browseBlog = function(){
+        this.browseBlog = function () {
             window.open('http://www.hascode.com/', '_blank', 'location=yes');
+        };
+    })
+
+    .controller('OverviewController', function ($scope, overviewService) {
+        "use strict";
+
+        $scope.tags = [];
+
+        $scope.loadTags = function(){
+            overviewService.fetchAll().then(function(response){
+                $scope.tags = response.data || [];
+                console.log('tags received: '+$scope.tags.length);
+            });
         };
     })
 ;

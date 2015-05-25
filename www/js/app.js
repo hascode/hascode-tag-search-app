@@ -33,6 +33,16 @@ angular.module('hascodeTagWizard', ['ionic'])
                 }
             })
 
+            .state('tab.overview', {
+                url: '/overview',
+                views: {
+                    'tab-overview': {
+                        templateUrl: "templates/tab-overview.html",
+                        controller: 'OverviewController'
+                    }
+                }
+            })
+
             .state('tab.about', {
                 url: '/about',
                 views: {
